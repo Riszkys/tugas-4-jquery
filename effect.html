@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- pembuatan sctipt jquery -->
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <!-- pembuatan java script -->
+    <script type="text/javascript">
+      // membuat effect fade in
+      $(document).ready(function () {
+        $("#fadein").click(function () {
+          $("#box").fadeIn("slow");
+        });
+        // membuat effect fade out
+        $("#fadeout").click(function () {
+          $("#box").fadeOut("slow", function () {});
+        });
+      });
+      // membuat effect out
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#fadeout1").click(function () {
+            $("#box").fadeOut("slow", function () {
+              $("#box").remove();
+            });
+          });
+        });
+        // membuat effect fade to (opacity ke pudar)
+        setTimeout(function () {
+          $("#fadesec").click(function () {
+            $("#box").fadeTo("slow", 0.5);
+          });
+        }, 3000);
+      });
+    </script>
+    <!-- pembuatan css -->
+    <style type="text/css">
+      /* css box 2 */
+      #box {
+        width: 200px;
+        height: 250px;
+        background-color: pink;
+        border: 2px solid black;
+        margin: 2rem 2rem 2rem;
+      }
+      /* css box 2 */
+      #box2 {
+        width: 200px;
+        height: 250px;
+        background-color: pink;
+        border: 2px solid black;
+        margin: 2rem 2rem 2rem;
+      }
+      /* css box 3 */
+      #box3 {
+        width: 200px;
+        height: 250px;
+        background-color: pink;
+        border: 2px solid black;
+        margin: 2rem 2rem 2rem;
+      }
+      /* css tombol */
+      .tombol {
+        margin: 1rem 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- untuk membuat header -->
+    <h2>Efek fade</h2>
+    <!-- membuat table untuk box -->
+    <table border="1" width="300px">
+      <tr>
+        <!-- rowspan digunakan untuk me merger table -->
+        <td rowspan="4">
+          <div id="box"></div>
+          <!-- pembuatan class tombol -->
+          <div class="tombol">
+            <!-- membuat button agar bisa di klik -->
+            <button id="fadein">Fade in</button>
+            <button id="fadeout">Fade Out</button>
+            <button id="fadesec">Fade to 0.3 Sec</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

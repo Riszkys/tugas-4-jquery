@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- penulisan script jquery -->
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <!-- penulisan script java script -->
+    <script type="text/javascript">
+      // menampilkan semua foto pada halaman website
+      $(document).ready(function () {
+        $("#foto, #foto1").show;
+      });
+      // membuat efek sembunyi pada foto ke 1
+      $(document).ready(function () {
+        $(".sembunyi").click(function () {
+          $("#foto").hide("slow");
+        });
+        // membuat efek tampil pada foto ke 1
+        $(".tampil").click(function () {
+          $("#foto").show("slow");
+        });
+      });
+      // membuat efek sembunyi pada foto ke 2
+      $(document).ready(function () {
+        $(".sembunyi1").click(function () {
+          $("#foto1").hide("slow");
+        });
+        // membuat efek tampil pada foto ke 2
+        $(".tampil1").click(function () {
+          $("#foto1").show("slow");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- pembuatan button -->
+      <button class="sembunyi">Sembunyikan</button>
+      <button class="tampil">Tampilkan</button>
+    </div>
+    <br />
+
+    <div>
+      <!-- pembuatan button -->
+      <button class="sembunyi1">Sembunyikan</button>
+      <button class="tampil1">Tampilkan</button>
+    </div>
+    <div>
+      <!-- pembuatan foto ke 1 -->
+      <img id="foto" src="LOGO UPN.png" width="300" />
+    </div>
+    <div>
+      <!-- pembuatan foto ke 2 -->
+      <img id="foto1" src="narutoo.jpeg" width="300" />
+    </div>
+  </body>
+</html>

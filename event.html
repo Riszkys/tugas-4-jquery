@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- pembuatan script jquery -->
+  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+  <!-- pembutan sctipt javascript -->
+  <script type="text/javascript">
+    // script untuk box jika di klik berubah warna
+    $(document).ready(function () {
+      $(".box1").dblclick(function () {
+        $(".box1").addClass("merah");
+      });
+      $(".box2").dblclick(function () {
+        $(".box2").addClass("merah");
+      });
+      $(".box3").dblclick(function () {
+        $(".box3").addClass("merah");
+      });
+      $(".box4").dblclick(function () {
+        $(".box4").addClass("merah");
+      });
+    });
+  </script>
+  <!-- pembuatan css -->
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    /* membuat box */
+    .box {
+      height: 300px;
+      width: 300px;
+      background: yellow;
+    }
+    /* membuat add clas untuk merubah warna box */
+    .merah {
+      background-color: red;
+    }
+  </style>
+  <body>
+    <!-- header pada html -->
+    <h1>Klik 2x pada setiap kotak untuk mengubah warnanya</h1>
+    <!-- Membuat tabel untuk setiap kotak -->
+    <table border="1">
+      <tr>
+        <td rowspan="4">
+          <!-- membuat class untuk pembuatan box -->
+          <div class="box box1" background="yellow"></div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <!-- membuat class untuk pembuatan box -->
+          <div class="box box2"></div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <!-- membuat class untuk pembuatan box -->
+          <div class="box box3"></div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <!-- membuat class untuk pembuatan box -->
+          <div class="box box4"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
